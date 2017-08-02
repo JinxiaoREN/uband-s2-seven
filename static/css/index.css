@@ -1,0 +1,15 @@
+.head_img{
+ 		width:100px;
+ 		height:100px;
+ 		border-radius:50px
+	}
+	body{
+		text-align: center;
+		background-color:darkturquoise
+	}
+	.name{
+		font-size: 18px
+	}
+	.des{
+		font-size: 13px
+	}
