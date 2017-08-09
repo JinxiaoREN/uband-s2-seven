@@ -1,0 +1,24 @@
+[
+	{
+		"name":"SKY",
+		"desc":"学生党，理工男，坐标青岛",
+		"tags":["完美主义","贪心"],
+		"checkins":123,
+		"head_icon":"/static/img/sky.png"
+	},
+	{
+		"name":"SKY",
+		"desc":"学生党，理工男，坐标青岛",
+		"tags":["完美主义","贪心"],
+		"checkins":123,
+		"head_icon":"/static/img/sky.png"
+	},
+	{
+		"name":"SKY",
+		"desc":"学生党，理工男，坐标青岛",
+		"tags":["完美主义","贪心"],
+		"checkins":123,
+		"head_icon":"/static/img/sky.png"
+	}
+
+]
