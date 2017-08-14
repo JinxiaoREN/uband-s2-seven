@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>Uband的朋友们</title>
+    <!-- <link rel="stylesheet" href="http://res.wx.qq.com/open/libs/weui/0.4.0/weui.min.css"> -->
+    <link rel="stylesheet" href="/static/css/weui.css">
+    <link rel="stylesheet" href="/static/css/index.css">
+</head>
+<body ontouchstart>
+    <div class="details-head">
+        <div class="details-head-img-page">
+        <a href="/">
+        <div class="back-icon"></div>
+        </a>
+        <img class="details-head-img" src="{{data.head_icon}}">
+        </div>
+        <div class="details-head-desc-page">
+        <div class="details-head-name">{{data.name}}</div>
+        <div class="details-head-desc">{{data.desc}}</div>
+        </div>
+    </div>
+    <div class="details-tabs">
+        <div id="per" class="details-tab tab-onclick">个人介绍</div>
+        <div id="photo" class="details-tab">相册</div>
+        <div id="essay" class="details-tab">随笔</div>
+        <div id="note" class="details-tab">留言板</div>
+    </div>
+
+    <div class="details-info">
+        <div class="details-info-tab info-show">
+            <div class="details-intro">
+            {{data.intro | safe}}
+            </div>
+        </div>
+        <div class="details-info-tab">
+         <div class="details-intro">
+            {{data.photo | safe}}
+            </div>
+        </div>
+        <div class="details-info-tab">
+            <div class="info-essay">
+                <div class="info-head">
+                 <img class="info-head-icon" src="{{data.head_icon}}">
+                </div>
+                <div class="essay-info">
+                  <div class="essay-title">
+                  文章一
+                  </div>
+                  <div class="essay-info-per">
+                  哈哈哈哈哈哈</div>
+                </div>
+                
+            </div>
+
+            <div class="info-essay">
+                <div class="info-head">
+                 <img class="info-head-icon" src="{{data.head_icon}}">
+                </div>
+                <div class="essay-info">
+                  <div class="essay-title">
+                  文章二
+                  </div>
+                  <div class="essay-info-per">
+                  哈哈哈哈哈哈</div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="details-info-tab">
+        <marquee scrollAmount=5 >
+        <p class="info-note-title">welcome to!</p></marquee>
+        <div class="info-note-add">
+        <textarea class="info-text">
+        </textarea>
+        <button class="info-button">提交</button>
+        </div>
+        <div class="info-note">
+            <div class="info-head">
+            <img class="info-head-icon" src="{{data.head_icon}}">
+            </div>
+            <div class="note-text">
+            哈哈哈哈哈哈
+            </div>
+            
+        </div>
+    </div>
+
+    <script type="text/javascript" src="/static/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="/static/js/tab.js"></script>
+</body>
+</html>
