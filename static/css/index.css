@@ -197,11 +197,15 @@
     display: block;
 }
 .note-text{
-	height:95%;
+	height:60%;
 	width: 80%;
 	float: left;
 }
-
+.note-time{
+    height: 30%;
+    width: 35%;
+    float: right;
+}
 .info-essay{
 	width: 95%;
 	height:50px;

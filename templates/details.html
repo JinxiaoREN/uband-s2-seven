@@ -24,7 +24,7 @@
     <div class="details-tabs">
         <div id="per" class="details-tab tab-onclick">个人介绍</div>
         <div id="photo" class="details-tab">相册</div>
-        <div id="essay" class="details-tab">随笔</div>
+        <div id="essay" class="details-tab">项目展示</div>
         <div id="note" class="details-tab">留言板</div>
     </div>
 
@@ -40,51 +40,42 @@
             </div>
         </div>
         <div class="details-info-tab">
-            <div class="info-essay">
-                <div class="info-head">
-                 <img class="info-head-icon" src="{{data.head_icon}}">
-                </div>
-                <div class="essay-info">
-                  <div class="essay-title">
-                  文章一
-                  </div>
-                  <div class="essay-info-per">
-                  哈哈哈哈哈哈</div>
-                </div>
-                
+            {% for item in pro_data %}
+            <div class="weui-panel__bd ">
+                <a href="/{{data.student_number}}/project/{{ item[0] }}" class="weui-media-box weui-media-box_appmsg ubnad-user-item">
+                     <div class="weui-media-box__hd">
+                        <img class="weui-media-box__thumb uband-user-item-img" src="{{item[2]}}" alt="">
+                    </div>
+                    <div class="weui-media-box__bd ">
+                        <h4 class="weui-media-box__title essay-title">{{ item[1] }}</h4>
+                    </div>
+                </a>
             </div>
-
-            <div class="info-essay">
-                <div class="info-head">
-                 <img class="info-head-icon" src="{{data.head_icon}}">
-                </div>
-                <div class="essay-info">
-                  <div class="essay-title">
-                  文章二
-                  </div>
-                  <div class="essay-info-per">
-                  哈哈哈哈哈哈</div>
-                </div>
-                
-            </div>
+            {% endfor %}
         </div>
         <div class="details-info-tab">
         <marquee scrollAmount=5 >
         <p class="info-note-title">welcome to!</p></marquee>
-        <div class="info-note-add">
-        <textarea class="info-text">
-        </textarea>
-        <button class="info-button">提交</button>
-        </div>
+        <form method="post" action="/notes?refer=/index.html"  method = "post">
+           <div class="info-note-add">
+               <textarea class="info-text" id="data1" name="note" placeholder="欢迎"></textarea>
+               <input  id="data" type="hidden" value='{{ data.student_number }}' name="student"/>
+                <button class="info-button" type="submit">提交</button>
+            </div>
+        </form>
+            {% for item in note %}
         <div class="info-note">
             <div class="info-head">
             <img class="info-head-icon" src="{{data.head_icon}}">
             </div>
             <div class="note-text">
-            哈哈哈哈哈哈
+            {{ item[0] }}
             </div>
-            
+            <div class="note-time">
+               {{ item[1] }}
+            </div>
         </div>
+            {% endfor%}
     </div>
 
     <script type="text/javascript" src="/static/js/jquery-1.12.4.min.js"></script>
